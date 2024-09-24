@@ -1,0 +1,26 @@
+.searchContainer {
+  display: flex;
+  align-items: center;
+  height: 38.4px;
+  border: 0;
+  border: 1px solid var(--light-grey);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 340px;
+  background-color: var(--white);
+  padding: 0 12px;
+}
+
+.search {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--text);
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
