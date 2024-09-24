@@ -1,5 +1,5 @@
 {
-  "name": "todo",
+  "name": "Shopping List",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  
   "dependencies": {
     "classnames": "^2.5.1",
     "prettier": "^3.3.3",
