@@ -27,3 +27,26 @@ body {
   padding-bottom: 18px;
   line-height: 39px;
 }
+
+@media (max-width: 992px) {
+  .contentWrapper {
+    width: 65%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentWrapper {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentWrapper {
+    width: 75%;
+  }
+
+  .head {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}

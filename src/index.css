@@ -1,11 +1,12 @@
 :root {
   --text: #303030;
-  --purple: #534cc2;
+  --purple: #787dd3;
+  --light-purple: #9794c7;
   --grey: #666666;
   --light-grey: #c3c1e5;
-  --lightest-grey: #d1d1d1;
+  --lightest-grey: #e3e0e0;
   --halfFiledblack: #25252579;
-  --backgroundLight: #e5e1ea;
+  --backgroundLight: #f2f0fe;
   --backgroundDark: #0e0219;
   --white: #ffffff;
 }
