@@ -17,7 +17,8 @@ body {
   flex-direction: column;
   align-items: center;
   width: 60%;
-  justify-content: center;
+  height: 100vh;
+  position: relative;
   padding-top: 40px;
 }
 
@@ -28,6 +29,9 @@ body {
   line-height: 39px;
 }
 
+.addButton {
+  position: fixed;
+}
 @media (max-width: 992px) {
   .contentWrapper {
     width: 65%;
