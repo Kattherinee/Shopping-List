@@ -1,16 +1,26 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import cn from "classnames";
 import styles from "./Modal.module.css";
 import { Input } from "../../ui/Input/Input";
 
-const Modal = function Modal({ open, onClose }) {
+const Modal = function Modal({ open, onClose, onApply, header, defaultNote }) {
   const dialog = useRef();
+  const [note, setNote] = useState("");
 
   useEffect(() => {
     if (open) dialog.current.showModal();
     else dialog.current.close();
   }, [open]);
+
+  useEffect(() => {
+    if (open) setNote(defaultNote);
+  }, [defaultNote, open]);
+
+  function handleApply() {
+    onApply(note);
+    onClose();
+  }
 
   return createPortal(
     <dialog
@@ -19,14 +29,19 @@ const Modal = function Modal({ open, onClose }) {
       onClose={onClose}
     >
       <div className={styles.content}>
-        <h2>New Note</h2>
-        <Input />
+        <h2>{header}</h2>
+        <Input note={note} setNote={setNote} />
       </div>
       <div className={styles.buttonsWrapper}>
         <button className={cn(styles.button, styles.cancel)} onClick={onClose}>
           Cancel
         </button>
-        <button className={cn(styles.button, styles.apply)}>Apply</button>
+        <button
+          className={cn(styles.button, styles.apply)}
+          onClick={handleApply}
+        >
+          Apply
+        </button>
       </div>
     </dialog>,
     document.getElementById("root")

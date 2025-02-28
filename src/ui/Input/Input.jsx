@@ -1,6 +1,6 @@
 import styles from "./Input.module.css";
 
-export function Input() {
+export function Input({ note, setNote }) {
   return (
     <>
       <div className={styles.inputContainer}>
@@ -8,6 +8,8 @@ export function Input() {
           className={styles.input}
           type="text"
           placeholder="Input your note..."
+          onChange={(e) => setNote(e.target.value)}
+          value={note}
         />
       </div>
     </>
