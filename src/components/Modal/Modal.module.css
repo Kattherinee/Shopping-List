@@ -60,7 +60,7 @@ h2 {
 }
 
 .cancel:hover {
-  background: #e6e1ff;
+  background: var(--light-purple);
 }
 
 .apply {
@@ -70,5 +70,5 @@ h2 {
 }
 
 .apply:hover {
-  background: #5a49e5;
+  background: var(--purple-hover);
 }

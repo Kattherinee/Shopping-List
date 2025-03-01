@@ -4,6 +4,7 @@ import styles from "./HomePage.module.css";
 import { useState, useEffect } from "react";
 import Modal from "../../components/Modal/Modal";
 import NotesList from "../../components/NotesList/NotesList";
+import detectiveLight from "../../assets/DetectiveLight.png";
 
 export function HomePage() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -69,11 +70,21 @@ export function HomePage() {
             defaultNote={editingNote ? editingNote.text : ""}
           />
           <AddButton className={styles.addButton} onClick={handleOpenAdd} />
-          <NotesList
-            notes={notes}
-            onEditMode={handleOpenEdit}
-            onDeleteMode={handleDeleteNote}
-          />
+          {notes.length ? (
+            <NotesList
+              notes={notes}
+              onEditMode={handleOpenEdit}
+              onDeleteMode={handleDeleteNote}
+            />
+          ) : (
+            <div className={styles.empty}>
+              <img
+                src={detectiveLight}
+                alt="detective searching for footprints"
+              />
+              <h2>Empty...</h2>
+            </div>
+          )}
         </div>
       </div>
     </>

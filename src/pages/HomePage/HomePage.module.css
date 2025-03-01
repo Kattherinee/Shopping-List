@@ -19,7 +19,6 @@ body {
   width: 60%;
   height: 100vh;
   position: relative;
-  padding-top: 40px;
 }
 
 .head {
@@ -27,10 +26,28 @@ body {
   font-weight: 500;
   padding-bottom: 18px;
   line-height: 39px;
+  margin-top: 40px;
 }
 
 .addButton {
   position: fixed;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.empty img {
+  width: 270px;
+  height: auto;
+}
+
+.empty h2 {
+  font-size: 22px;
+  text-transform: capitalize;
 }
 @media (max-width: 992px) {
   .contentWrapper {

@@ -54,10 +54,10 @@
 
 .select-options div:hover {
   background-color: #f0f0f0;
-  color: var(--light-purple);
+  color: var(--purple);
 }
 .custom-select:hover {
-  box-shadow: 0px 0px 2px rgb(125, 125, 168);
+  background-color: var(--purple-hover);
 }
 
 @media (max-width: 768px) {

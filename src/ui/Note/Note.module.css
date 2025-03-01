@@ -78,9 +78,11 @@
 }
 .icons img {
   cursor: pointer;
+  filter: brightness(0.8) contrast(1.7);
 }
 
 .icons img:hover {
-  filter: brightness(0.7) contrast(1.1);
+  filter: brightness(0.7) contrast(1.1)
+    drop-shadow(0px 0px 0.5px rgba(117, 15, 154, 0.5));
   transition: filter 0.2s ease;
 }
