@@ -1,6 +1,7 @@
 :root {
-  --text: #303030;
-  --purple: #8e64d7;
+  --text-light: #303030;
+  --text-dark: #dedae2;
+  --purple: rgb(142, 100, 215);
   --purple-hover: #745ebc;
   --light-purple: #d9c3f0;
   --grey: #666666;
@@ -8,7 +9,7 @@
   --lightest-grey: #e3e0e0;
   --halfFiledblack: #25252579;
   --backgroundLight: #f2f0fe;
-  --backgroundDark: #0e0219;
+  --backgroundDark: #252525;
   --white: #ffffff;
 }
 
@@ -17,8 +18,6 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  background: var(--backgroundLight);
-  color: var(--text);
 }
 html,
 body {

@@ -61,9 +61,8 @@
 }
 
 .text {
-  margin-left: 0.5rem;
+  margin-left: 20px;
   font-size: 18px;
-  text-transform: capitalize;
 }
 
 .customCheckbox input[type="checkbox"]:checked ~ .text {
@@ -81,8 +80,13 @@
   filter: brightness(0.8) contrast(1.7);
 }
 
-.icons img:hover {
-  filter: brightness(0.7) contrast(1.1)
-    drop-shadow(0px 0px 0.5px rgba(117, 15, 154, 0.5));
+.edit:hover {
+  filter: brightness(0.8) contrast(1.2)
+    drop-shadow(0px 0px 0.3px rgb(117, 15, 154));
+  transition: filter 0.2s ease;
+}
+.delete:hover {
+  filter: brightness(0.8) contrast(1.2)
+    drop-shadow(0px 0px 0.3px rgb(194, 0, 0));
   transition: filter 0.2s ease;
 }

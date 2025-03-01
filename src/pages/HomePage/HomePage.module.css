@@ -11,6 +11,13 @@ body {
   min-height: 100vh;
   width: 100vw;
   align-items: center;
+  background: var(--backgroundLight);
+  color: var(--text);
+}
+
+.container.dark {
+  background: var(--backgroundDark);
+  color: var(--text-dark);
 }
 .contentWrapper {
   display: flex;
@@ -38,6 +45,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  margin-top: 20px;
 }
 
 .empty img {

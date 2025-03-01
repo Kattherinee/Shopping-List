@@ -1,0 +1,15 @@
+.modeButton {
+  background-color: var(--purple);
+  border-radius: 40%;
+  width: 38px;
+  height: 38px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.modeButton:hover {
+  background-color: var(--purple-hover);
+}

@@ -3,10 +3,13 @@ import { createPortal } from "react-dom";
 import cn from "classnames";
 import styles from "./Modal.module.css";
 import { Input } from "../../ui/Input/Input";
+import { useTheme } from "../../ThemeContext";
 
 const Modal = function Modal({ open, onClose, onApply, header, defaultNote }) {
   const dialog = useRef();
   const [note, setNote] = useState("");
+
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (open) dialog.current.showModal();
@@ -24,7 +27,7 @@ const Modal = function Modal({ open, onClose, onApply, header, defaultNote }) {
 
   return createPortal(
     <dialog
-      className={cn(styles.modal, { [styles.open]: open })}
+      className={cn(styles.modal, { [styles.open]: open }, styles[theme])}
       ref={dialog}
       onClose={onClose}
     >

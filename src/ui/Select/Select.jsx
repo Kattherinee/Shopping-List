@@ -2,7 +2,7 @@ import styles from "./Select.module.css";
 import { useState } from "react";
 import moreIcon from "/src/assets/icons/more.svg";
 
-function Select({ options, value, onChange }) {
+function Select({ options, value, onChange, onFilter }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -12,13 +12,21 @@ function Select({ options, value, onChange }) {
   const handleSelect = (option) => {
     onChange(option);
     setIsOpen(false);
+
+    if (option === "Done") {
+      onFilter(true);
+    } else if (option === "To do") {
+      onFilter(false);
+    } else {
+      onFilter(null);
+    }
   };
 
   return (
     <div className={styles["select-container"]} onClick={handleToggle}>
       <div className={styles["custom-select"]}>
         <div className={styles["value-container"]}>
-          <div className={styles["select-value"]}> {value}</div>
+          <div className={styles["select-value"]}>{value}</div>
         </div>
         <img className={styles.imgCustom} src={moreIcon} alt="" />
       </div>
@@ -34,4 +42,5 @@ function Select({ options, value, onChange }) {
     </div>
   );
 }
+
 export default Select;

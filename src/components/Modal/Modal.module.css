@@ -18,6 +18,11 @@
   box-sizing: border-box;
   border: none;
 }
+.modal.dark {
+  background: var(--backgroundDark);
+  color: var(--text-dark);
+  border: 1px solid var(--text-dark);
+}
 
 .content {
   width: 100%;

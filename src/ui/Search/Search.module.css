@@ -2,13 +2,16 @@
   display: flex;
   align-items: center;
   height: 38px;
-  border: 0;
   border: 1px solid var(--light-purple);
   border-radius: 4px;
   width: 100%;
   max-width: 595px;
   background-color: var(--white);
   padding: 0 12px;
+}
+.searchContainer.dark {
+  border: 1px solid var(--light-grey);
+  background-color: #353535;
 }
 
 .search {
@@ -28,15 +31,40 @@
   color: var(--light-grey);
   font-size: 16px;
 }
+.search.dark {
+  color: var(--text-dark);
+  background-color: #353535;
+}
+
+.iconsContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  filter: invert(0.4) brightness(1.4);
+}
+
+.iconDivider {
+  display: inline-block;
+  width: 0.7px;
+  height: 18px;
+  background-color: var(--light-purple);
+  margin: 0 4px;
+  margin-right: 2px;
+}
+
+.icon:hover {
+  filter: invert(0.2) brightness(1.2);
+}
 
 .searchContainer:hover {
-  box-shadow: 0px 0px 2px #a8abff;
+  box-shadow: 0px 0px 3px #a8abff;
 }
 .searchContainer:focus-within {
   box-shadow: 0px 0px 5px #b2a8ff;
-}
-
-.searchIcon {
-  display: flex;
-  align-items: center;
 }
