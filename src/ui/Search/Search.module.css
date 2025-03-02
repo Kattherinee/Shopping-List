@@ -8,6 +8,7 @@
   max-width: 595px;
   background-color: var(--white);
   padding: 0 12px;
+  box-sizing: border-box;
 }
 .searchContainer.dark {
   border: 1px solid var(--light-grey);
@@ -26,6 +27,7 @@
   width: 100%;
   box-sizing: border-box;
   padding: 0;
+  margin-inline-end: 10px;
 }
 .search::placeholder {
   color: var(--light-grey);
@@ -67,4 +69,30 @@
 }
 .searchContainer:focus-within {
   box-shadow: 0px 0px 5px #b2a8ff;
+}
+
+@media (max-width: 480px) {
+  .searchContainer {
+    padding: 0 8px;
+    padding-left: 12px;
+    max-width: 100%;
+  }
+
+  .search {
+    font-size: 14px;
+  }
+
+  .iconsContainer {
+    gap: 3px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .iconDivider {
+    height: 16px;
+    margin-left: 4px;
+  }
 }

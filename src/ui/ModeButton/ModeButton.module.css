@@ -13,3 +13,14 @@
 .modeButton:hover {
   background-color: var(--purple-hover);
 }
+@media (max-width: 480px) {
+  .modeButton {
+    width: 32px;
+    height: 32px;
+  }
+
+  .modeButton img {
+    width: 18px;
+    height: auto;
+  }
+}

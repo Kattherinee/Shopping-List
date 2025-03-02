@@ -21,8 +21,8 @@ export default function ToolBar({ onFilter, onSearch }) {
           onChange={handleStatusChange}
           onFilter={onFilter}
         />
+        <ModeButton />
       </div>
-      <ModeButton />
     </div>
   );
 }
