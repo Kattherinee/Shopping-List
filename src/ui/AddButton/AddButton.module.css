@@ -16,3 +16,11 @@
 .addButton:hover {
   background-color: var(--purple-hover);
 }
+
+@media (max-width: 480px) {
+  .addButton {
+    width: 40px;
+    height: 40px;
+    right: 10%;
+  }
+}

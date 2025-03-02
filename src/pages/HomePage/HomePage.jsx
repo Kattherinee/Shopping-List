@@ -19,6 +19,11 @@ export function HomePage() {
   const { theme } = useTheme();
 
   useEffect(() => {
+    document.body.classList.remove("light", "dark");
+    document.body.classList.add(theme);
+  }, [theme]);
+
+  useEffect(() => {
     const keys = Object.keys(localStorage);
     const loadedNotes = keys
       .filter((key) => key !== "theme")
