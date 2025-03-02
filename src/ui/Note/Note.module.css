@@ -1,6 +1,7 @@
 .noteContainer {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   border-bottom: 1px solid var(--light-purple);
   max-width: 540px;
   width: 100%;
@@ -13,6 +14,7 @@
   position: relative;
   cursor: pointer;
   user-select: none;
+  flex: 1;
 }
 
 .customCheckbox input {
@@ -21,9 +23,11 @@
   width: 0;
   height: 0;
   cursor: pointer;
+  flex-wrap: wrap;
 }
 
 .checkmark {
+  position: relative;
   width: 26px;
   height: 26px;
   border: 2px solid var(--purple);
@@ -47,8 +51,8 @@
   content: "";
   position: absolute;
   display: none;
-  left: 9px;
-  top: 2px;
+  left: 8px;
+  top: 1px;
   width: 7px;
   height: 14px;
   border: solid #fff;
@@ -62,7 +66,13 @@
 
 .text {
   margin-left: 20px;
+  padding-right: 12px;
   font-size: 18px;
+  flex: 1;
+  min-width: 0;
+  white-space: normal;
+  word-break: break-word;
+  display: block;
 }
 
 .customCheckbox input[type="checkbox"]:checked ~ .text {
@@ -102,8 +112,8 @@
   }
 
   .checkmark::after {
-    left: 7px;
-    top: 2px;
+    left: 6px;
+    top: 0px;
     width: 6px;
     height: 12px;
   }
@@ -130,8 +140,8 @@
   }
 
   .checkmark::after {
-    left: 6px;
-    top: 4px;
+    left: 5px;
+    top: 0px;
     width: 5px;
     height: 10px;
   }
