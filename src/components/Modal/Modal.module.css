@@ -102,7 +102,9 @@ h2 {
 @media (max-width: 480px) {
   .modal {
     width: 300px;
+    height: 250px;
     padding: 25px 20px;
+    margin-top: 120px;
   }
 
   h2 {
@@ -111,14 +113,19 @@ h2 {
   }
 
   .buttonsWrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: stretch;
     gap: 10px;
   }
 
   .button {
     width: 100%;
-
     font-size: 16px;
+    height: 36px;
+  }
+  .overlay {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 20px;
   }
 }
