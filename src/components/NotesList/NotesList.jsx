@@ -1,4 +1,5 @@
 import Note from "../../ui/Note/Note";
+import styles from "./NotesList.module.css";
 
 export default function NotesList({
   notes,
@@ -7,7 +8,7 @@ export default function NotesList({
   onToggle,
 }) {
   return (
-    <>
+    <div className={styles.list}>
       {notes.map((note) => (
         <Note
           key={note.id}
@@ -19,6 +20,6 @@ export default function NotesList({
           {note.text}
         </Note>
       ))}
-    </>
+    </div>
   );
 }

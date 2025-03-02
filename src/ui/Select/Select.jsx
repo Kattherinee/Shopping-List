@@ -28,9 +28,9 @@ function CustomSelect({ options, value, onChange, onFilter }) {
   }, []);
 
   const isSmall = windowWidth < 480;
-  const controlWidth = isSmall ? "87px" : "93px";
+  const controlWidth = isSmall ? "87px" : "100px";
   const controlHeight = isSmall ? "32px" : "38px";
-  const fontSize = isSmall ? "13px" : "18px";
+  const fontSize = isSmall ? "13px" : "16px";
   const arrowSize = isSmall ? "12px" : "15px";
   const menuWidth = controlWidth;
 
@@ -54,7 +54,6 @@ function CustomSelect({ options, value, onChange, onFilter }) {
       ...provided,
       color: "#fff",
       textTransform: "uppercase",
-      fontWeight: 500,
       fontSize: fontSize,
     }),
     dropdownIndicator: (provided, state) => ({
@@ -94,7 +93,6 @@ function CustomSelect({ options, value, onChange, onFilter }) {
     option: (provided, state) => ({
       ...provided,
       cursor: "pointer",
-      fontWeight: 500,
       textTransform: "uppercase",
       padding: "8px 12px",
       fontSize: fontSize,

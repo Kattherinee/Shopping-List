@@ -99,7 +99,7 @@ export function HomePage() {
   const displayedNotes = notes.filter((note) => {
     const statusMatch = filterNote === null ? true : note.status === filterNote;
     const searchMatch =
-      searchQuery.trim().length < 3 ||
+      searchQuery.trim().length < 2 ||
       note.text.toLowerCase().includes(searchQuery.toLowerCase());
     return statusMatch && searchMatch;
   });

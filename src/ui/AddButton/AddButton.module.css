@@ -5,7 +5,7 @@
   height: 50px;
   position: fixed;
   bottom: 50px;
-  right: 25%;
+  right: 24%;
   border: none;
   display: flex;
   justify-content: center;
@@ -17,10 +17,18 @@
   background-color: var(--purple-hover);
 }
 
+@media (max-width: 768px) {
+  .addButton {
+    width: 45px;
+    height: 45px;
+    right: 15%;
+  }
+}
+
 @media (max-width: 480px) {
   .addButton {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     right: 10%;
   }
 }

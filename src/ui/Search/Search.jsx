@@ -10,7 +10,7 @@ export function Search({ onFilter }) {
   const [search, setSearch] = useState("");
 
   const handleSearch = () => {
-    if (search.trim().length >= 3) {
+    if (search.trim().length >= 2) {
       onFilter(search);
     } else {
       onFilter("");
